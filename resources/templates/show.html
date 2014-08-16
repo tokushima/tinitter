@@ -1,0 +1,23 @@
+<rt:extends href="frame.html" />
+
+<rt:block name="content">
+
+<rt:if param="{$paginator.current()}" value="1">
+	<rt:parts href="form.html" />
+</rt:if>
+
+<rt:parts href="paginator.html" />
+
+<rt:loop param="post_list" var="post">
+    <div class="postcell">
+        <div class="body">{$post.body()}</div>
+        <div class="info">
+            post by <span class="nickname">{$post.nickname()}</span>
+            <span class="date">({$post.fm_created_at()})</span>
+        </div>
+    </div>
+</rt:loop>
+
+<rt:parts href="paginator.html" />
+
+</rt:block>

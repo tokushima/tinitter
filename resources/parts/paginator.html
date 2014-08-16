@@ -1,0 +1,17 @@
+<div class="text-center">
+    <ul class="pagination pagination-lg">
+    	<rt:if param="{$paginator.is_prev()}">
+			<rt:if param="{$paginator.prev()}" value="1">
+				<li class="active"><a href="{$t.map_url('index')}" class="prev">&laquo;</a></li>
+			<rt:else />
+				<li class="active"><a href="{$t.map_url('page',$paginator.prev())}" class="prev">&laquo;</a></li>
+			</rt:if>
+		</rt:if>
+
+        <li><span class="page-num">{$paginator.current()}</span></li>
+
+		<rt:if param="{$paginator.is_next()}">
+            <li class="active"><a href="{$t.map_url('page',$paginator.next())}" class="next">&raquo;</a></li>
+		</rt:if>
+    </ul>
+</div>
