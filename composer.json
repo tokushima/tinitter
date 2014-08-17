@@ -1,5 +1,6 @@
 {
     "require": {
-        "tokushima/ebi": "dev-master"
+        "tokushima/ebi": "dev-master",
+        "paquettg/php-html-parser": "1.6.3"
     }
 }

@@ -22,6 +22,7 @@ include_once('bootstrap.php');
 			'post_after'=>'index',
 			'error_template'=>'error_form.html'
 		],
-	]
+//		'dt'=>['action'=>'ebi.Dt'],
+	],
 ]);
 

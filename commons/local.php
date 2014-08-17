@@ -8,4 +8,9 @@
 			],
 		],
 	],
+	'ebi.Log'=>[
+		'level'=>'warn',
+		'file'=>dirname(__DIR__).'/work/output.log',
+		'stdout'=>true,
+	],
 ]);

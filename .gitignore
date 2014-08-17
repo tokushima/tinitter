@@ -1,3 +1,10 @@
 /.settings/
 /.buildpath
 /.project
+/cmdman.phar
+/composer.lock
+/composer.phar
+/testman.phar
+/vendor/
+/work/
+/data.db
