@@ -16,7 +16,8 @@ include_once('bootstrap.php');
 			'action'=>'TimeLine::show',
 			'template'=>'show.html'
 		],
-		'page/commit'=>['name'=>'commit',
+		'page/commit'=>[
+			'name'=>'commit',
 			'action'=>'Post::commit',
 			'template'=>'show.html',
 			'post_after'=>'index',

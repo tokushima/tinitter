@@ -3,7 +3,7 @@
  * 投稿が保存されるか
  */
 $b = new \testman\Browser();
-$b->do_get(test_map_url('index::index'));
+$b->do_get(url('index::index'));
 
 // CSRF対策のトークンを事前取得
 $csrftoken = null;
@@ -23,7 +23,7 @@ $b->vars('nickname',$test_name);
 $b->vars('body',$test_body);
 $b->vars('csrftoken',$csrftoken);
 // データを送信
-$b->do_post(test_map_url('index::commit'));
+$b->do_post(url('index::commit'));
 eq(200,$b->status());
 
 // DBに保存されたかを確認
@@ -32,7 +32,7 @@ eq($test_name,$post->nickname());
 eq($test_body,$post->body());
 
 // 投稿がページに表示されているか確認
-$b->do_get(test_map_url('index::page',1));
+$b->do_get(url('index::page',1));
 
 $dom = new \PHPHtmlParser\Dom();
 $dom->load($b->body());
