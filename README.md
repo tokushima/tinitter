@@ -16,7 +16,7 @@ $ php composer.phar update
 ```
 $ curl -LO http://git.io/cmdman.phar
 $ php cmdman.phar ebi.Dt::setup
-$ php cmdman.phar ebi.Dt::create_table
+$ php cmdman.phar ebi.Dt::dao_create_table
 ```
 
 
